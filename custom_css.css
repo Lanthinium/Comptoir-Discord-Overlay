@@ -1,0 +1,186 @@
+/* =================== General =================== */
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li[class*="Voice_voiceState"]{
+    width: 57px;
+    height: 90px;
+    margin: 30px 5px 5px 5px;
+    position: static;
+    display: inline-block;
+}
+
+/* =================== Icônes de classes =================== */
+li[data-userid] div:before {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 57px !important;
+    background-position: center;
+    background-size: 35px, contain;
+    background-repeat: no-repeat;
+    margin: -120px auto 0;
+    z-index: 100;
+    filter: drop-shadow(0 2px 4px black);
+    opacity: 0.5;
+}
+
+/* =================== Avatars =================== */
+img[class^="Voice_avatar"] {
+    border-radius: 20px;
+    aspect-ratio: 1;
+    width: 57px;
+    height: 57px;
+    margin: -3px;
+    opacity: 0.5;
+}
+/* Avatar :: en train de parler */
+img[class*="Speaking"] {
+    border-color: rgba(0, 255, 0, 0.7);
+    position: relative;
+    opacity: 1;
+	filter: drop-shadow(0 2px 4px black);
+}
+/* Avatar :: mute */
+li[class*="self_mute"] img {
+    border-color:rgba(255, 0, 0,1);
+}
+/* Avatar :: mute (petit icône de micro coupé) */
+li[class*="self_mute"]:not(li[class*="self_deaf"]):after { 
+    content:'';
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid rgba(255,0,0,0.5);
+    margin-top: -20px;
+    margin-left: -20px;
+    background-color: rgba(0,0,0,0.7);
+    background-image: var(--mute);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+}
+/* Full mute : AFK Icon */
+li[class*="self_mute self_deaf"]:after {
+    content:'';
+    position: absolute;
+    width: 40px;
+    aspect-ratio: 1;
+    margin-top: -30px;
+    margin-left: -26px;
+    background-image: var(--afk);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* filter: brightness(70%); */
+    filter:drop-shadow(0 4px 2px black);
+}
+
+/* =================== Pseudos =================== */
+div[class*="user"]{
+    background: rgba(0,0,0,.7);
+    border-radius: 3px;
+    display: inline-block;
+}
+/* Text container */
+div[class*="voice_username"] {
+    width: 100%;
+    height: 17px;
+    padding: 3px 0;
+    margin-top: 10px;
+}
+/* Text */
+span[class^="Voice_name"]{
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    line-height: 15px !important;
+    vertical-align: center;
+    padding: 1px !important; 
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-align: center;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: " ";
+}
+/* Custom pseudo properties */
+li[data-userid] div span:after {
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    width: 100%;
+}
+li[class~="wrapper_speaking"] div:before {
+	opacity: 1 !important;	
+}
+
+/* =================== Custom Job Icons =================== */
+
+/* Néanmoins */
+li[data-userid="137200081727258624"] div:before { content:''; background-image: var(--icon-WAR); } /* Kez */
+li[data-userid="133266106340081664"] div:before { content:''; background-image: var(--icon-BRD); } /* Léna */
+li[data-userid="257087591596163075"] div:before { content:''; background-image: var(--icon-DRG); } /* Sepi */
+li[data-userid="134306647404183553"] div:before { content:''; background-image: var(--icon-SMN); } /* Douhbée */
+li[data-userid="183895066853507072"] div:before { content:''; background-image: var(--icon-SCH); } /* Susus */
+li[data-userid="99897349144330240"]  div:before { content:''; background-image: var(--icon-PLD); } /* Lucas */
+li[data-userid="242393149979361281"] div:before { content:''; background-image: var(--icon-WHM); } /* Mite */
+li[data-userid="207170760710684673"] div:before { content:''; background-image: var(--icon-RDM); } /* Frangi */
+
+/* =================== Custom Pseudos =================== */
+
+/* Remember to add a blank space after a custom pseudo to keep the central alignment */
+li[data-userid="137200081727258624"] div span { visibility: hidden }
+li[data-userid="137200081727258624"] div span:before { visibility: visible; content: 'Kezziah '; }
+li[data-userid="543157080782012436"] div span { visibility: hidden }
+li[data-userid="543157080782012436"] div span:before { visibility: visible; content: 'Lena '; }
+li[data-userid="257087591596163075"] div span { visibility: hidden }
+li[data-userid="257087591596163075"] div span:before { visibility: visible; content: 'Sephi '; }
+li[data-userid="134306647404183553"] div span { visibility: hidden }
+li[data-userid="134306647404183553"] div span:before { visibility: visible; content: 'Douhbee '; }
+li[data-userid="183895066853507072"] div span { visibility: hidden }
+li[data-userid="183895066853507072"] div span:before { visibility: visible; content: 'Sulein '; }
+li[data-userid="99897349144330240"]  div span { visibility: hidden }
+li[data-userid="99897349144330240"]  div span:before { visibility: visible; content: 'Lucas '; }
+li[data-userid="242393149979361281"] div span { visibility: hidden }
+li[data-userid="242393149979361281"] div span:before { visibility: visible; content: 'Mite '; }
+li[data-userid="207170760710684673"] div span { visibility: hidden }
+li[data-userid="207170760710684673"] div span:before { visibility: visible; content: 'Frangi '; }
+
+/* =================== Icon bank =================== */
+:root {
+    /* Tanks */
+    --icon-PLD: url('https://i.imgur.com/UmGhhCC.png');
+    --icon-WAR: url('https://i.imgur.com/E7nzOl1.png');
+    --icon-DRK: url('https://i.imgur.com/V3qLSIY.png');
+    --icon-GNB: url('https://i.imgur.com/7tibsaO.png');
+    /* Healers */
+    --icon-WHM: url('https://i.imgur.com/SXRmffc.png');
+    --icon-AST: url('https://i.imgur.com/BAhSiNI.png');
+    --icon-SGE: url('https://i.imgur.com/g0Nr6hM.png');
+    --icon-SCH: url('https://i.imgur.com/2So9mns.png');
+    /* Melee DPS */
+    --icon-DRG: url('https://i.imgur.com/qwTjNxM.png');
+    --icon-RPR: url('https://i.imgur.com/ReOKMKm.png');
+    --icon-SAM: url('https://i.imgur.com/070sf6t.png');
+    --icon-NIN: url('https://i.imgur.com/6p2NPE5.png');
+    --icon-MNK: url('https://i.imgur.com/Cxq3mae.png');
+    /* Caster DPS */
+    --icon-SMN: url('https://i.imgur.com/Pl9pexe.png');
+    --icon-BLM: url('https://i.imgur.com/JGlhDgn.png');
+    --icon-RDM: url('https://i.imgur.com/MsMxHve.png');
+    /* Ranged DPS */
+    --icon-BRD: url('https://i.imgur.com/kP0hqIS.png');
+    --icon-DNS: url('https://i.imgur.com/XjmiiIq.png');
+    --icon-MCH: url('https://i.imgur.com/Y8ynCf0.png');
+
+    /* Icon bank */
+    --disconnected: url('https://cdn.discordapp.com/emojis/1097683807701840077.webp');
+    --afk: url('https://cdn.discordapp.com/attachments/335220719828992000/1215444400474296370/061511_hr1.png?ex=65fcc5ce&is=65ea50ce&hm=80eece12fba1d3fbc3eea5700f97e7a6cc3b2d544736dd9a5d067ea94a96841e&');
+    --mute: url('https://cdn.discordapp.com/attachments/335220719828992000/1215448469532180501/mute.png?ex=65fcc999&is=65ea5499&hm=09a13e99ab193c6433db47dd53d0832d84d27ea63d0d10306bd1ee930e8c851d&');
+}
