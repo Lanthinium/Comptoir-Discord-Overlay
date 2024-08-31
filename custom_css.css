@@ -13,7 +13,7 @@ li[class*="Voice_voiceState"]{
     display: inline-block;
 }
 
-/* =================== Icônes de classes =================== */
+/* =================== IcÃ´nes de classes =================== */
 li[data-userid] div:before {
     position: absolute;
     aspect-ratio: 1;
@@ -47,7 +47,7 @@ img[class*="Speaking"] {
 li[class*="self_mute"] img {
     border-color:rgba(255, 0, 0,1);
 }
-/* Avatar :: mute (petit icône de micro coupé) */
+/* Avatar :: mute (petit icÃ´ne de micro coupÃ©) */
 li[class*="self_mute"]:not(li[class*="self_deaf"]):after { 
     content:'';
     position: absolute;
@@ -113,7 +113,7 @@ li[data-userid] div span:after {
     color: white;
     position: absolute;
     text-align: center;
-    left: 0px;
+    left: 0;
     width: 100%;
 }
 li[class~="wrapper_speaking"] div:before {
@@ -122,15 +122,17 @@ li[class~="wrapper_speaking"] div:before {
 
 /* =================== Custom Job Icons =================== */
 
-/* Néanmoins */
-li[data-userid="137200081727258624"] div:before { content:''; background-image: var(--icon-WAR); } /* Kez */
-li[data-userid="133266106340081664"] div:before { content:''; background-image: var(--icon-BRD); } /* Léna */
-li[data-userid="257087591596163075"] div:before { content:''; background-image: var(--icon-DRG); } /* Sepi */
-li[data-userid="134306647404183553"] div:before { content:''; background-image: var(--icon-SMN); } /* Douhbée */
-li[data-userid="183895066853507072"] div:before { content:''; background-image: var(--icon-SCH); } /* Susus */
-li[data-userid="99897349144330240"]  div:before { content:''; background-image: var(--icon-PLD); } /* Lucas */
-li[data-userid="242393149979361281"] div:before { content:''; background-image: var(--icon-WHM); } /* Mite */
-li[data-userid="207170760710684673"] div:before { content:''; background-image: var(--icon-RDM); } /* Frangi */
+li div:before { content:''; }
+
+/* NÃ©anmoins */
+li[data-userid="137200081727258624"] div:before { background-image: var(--icon-WAR); } /* Kez */
+li[data-userid="133266106340081664"] div:before { background-image: var(--icon-BRD); } /* LÃ©na */
+li[data-userid="257087591596163075"] div:before { background-image: var(--icon-DRG); } /* Sepi */
+li[data-userid="134306647404183553"] div:before { background-image: var(--icon-SMN); } /* Douhbée */
+li[data-userid="183895066853507072"] div:before { background-image: var(--icon-SCH); } /* Susus */
+li[data-userid="99897349144330240"]  div:before { background-image: var(--icon-PLD); } /* Lucas */
+li[data-userid="242393149979361281"] div:before { background-image: var(--icon-WHM); } /* Mite */
+li[data-userid="207170760710684673"] div:before { background-image: var(--icon-RDM); } /* Frangi */
 
 /* =================== Custom Pseudos =================== */
 
@@ -155,32 +157,34 @@ li[data-userid="207170760710684673"] div span:before { visibility: visible; cont
 /* =================== Icon bank =================== */
 :root {
     /* Tanks */
-    --icon-PLD: url('https://i.imgur.com/UmGhhCC.png');
-    --icon-WAR: url('https://i.imgur.com/E7nzOl1.png');
-    --icon-DRK: url('https://i.imgur.com/V3qLSIY.png');
-    --icon-GNB: url('https://i.imgur.com/7tibsaO.png');
+    --icon-PLD: url('https://i.imgur.com/ZZe9os3.png');
+    --icon-WAR: url('https://i.imgur.com/z2vTKyo.png');
+    --icon-DRK: url('https://i.imgur.com/gq9boC6.png');
+    --icon-GNB: url('https://i.imgur.com/82JZe5l.png');
     /* Healers */
-    --icon-WHM: url('https://i.imgur.com/SXRmffc.png');
-    --icon-AST: url('https://i.imgur.com/BAhSiNI.png');
-    --icon-SGE: url('https://i.imgur.com/g0Nr6hM.png');
-    --icon-SCH: url('https://i.imgur.com/2So9mns.png');
+    --icon-WHM: url('https://i.imgur.com/sqjReDl.png');
+    --icon-AST: url('https://i.imgur.com/0EBgVM5.png');
+    --icon-SGE: url('https://i.imgur.com/KcxhkRQ.png');
+    --icon-SCH: url('https://i.imgur.com/fnJCxLm.png');
     /* Melee DPS */
-    --icon-DRG: url('https://i.imgur.com/qwTjNxM.png');
-    --icon-RPR: url('https://i.imgur.com/ReOKMKm.png');
-    --icon-SAM: url('https://i.imgur.com/070sf6t.png');
-    --icon-NIN: url('https://i.imgur.com/6p2NPE5.png');
-    --icon-MNK: url('https://i.imgur.com/Cxq3mae.png');
+    --icon-DRG: url('https://i.imgur.com/cJstWr2.png');
+    --icon-RPR: url('https://i.imgur.com/EtGTFMv.png');
+    --icon-SAM: url('https://i.imgur.com/BClFMUo.png');
+    --icon-NIN: url('https://i.imgur.com/2gx74TE.png');
+    --icon-MNK: url('https://i.imgur.com/ulwir9V.png');
+    --icon-VPR: url('https://i.imgur.com/dxDUrA4.png');
     /* Caster DPS */
-    --icon-SMN: url('https://i.imgur.com/Pl9pexe.png');
-    --icon-BLM: url('https://i.imgur.com/JGlhDgn.png');
-    --icon-RDM: url('https://i.imgur.com/MsMxHve.png');
+    --icon-SMN: url('https://i.imgur.com/uKHgPIZ.png');
+    --icon-BLM: url('https://i.imgur.com/gIrSujv.png');
+    --icon-RDM: url('https://i.imgur.com/ZVVAwGI.png');
+    --icon-PCT: url('https://i.imgur.com/PAPtE3N.png');
     /* Ranged DPS */
-    --icon-BRD: url('https://i.imgur.com/kP0hqIS.png');
-    --icon-DNS: url('https://i.imgur.com/XjmiiIq.png');
-    --icon-MCH: url('https://i.imgur.com/Y8ynCf0.png');
+    --icon-BRD: url('https://i.imgur.com/nfnr8Q4.png');
+    --icon-DNS: url('https://i.imgur.com/BXAs55F.png');
+    --icon-MCH: url('https://i.imgur.com/2cQj3wD.png');
 
     /* Icon bank */
     --disconnected: url('https://cdn.discordapp.com/emojis/1097683807701840077.webp');
-    --afk: url('https://cdn.discordapp.com/attachments/335220719828992000/1215444400474296370/061511_hr1.png?ex=65fcc5ce&is=65ea50ce&hm=80eece12fba1d3fbc3eea5700f97e7a6cc3b2d544736dd9a5d067ea94a96841e&');
-    --mute: url('https://cdn.discordapp.com/attachments/335220719828992000/1215448469532180501/mute.png?ex=65fcc999&is=65ea5499&hm=09a13e99ab193c6433db47dd53d0832d84d27ea63d0d10306bd1ee930e8c851d&');
+    --afk: url('https://i.imgur.com/4Fid9r2.png');
+    --mute: url('https://i.imgur.com/CQyMXDO.png');
 }
